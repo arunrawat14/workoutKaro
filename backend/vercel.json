@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "your-build-command",
+        "use": "@vercel/static-build",
+        "config": {}
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "your-api-endpoint"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "your-static-page"
+      }
+    ]
+  }
